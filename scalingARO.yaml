@@ -16,12 +16,12 @@
     replicas: 3  # Número de réplicas desejado
 
   tasks:
-    - name: Set environment variables for Azure authentication
-      ansible.builtin.set_env:
-        AZURE_CLIENT_ID: "{{ app_id }}"
-        AZURE_SECRET: "{{ client_secret }}"
-        AZURE_TENANT: "{{ tenant_id }}"
-        AZURE_SUBSCRIPTION_ID: "{{ azure_subscription_id }}"
+   # - name: Set environment variables for Azure authentication
+   #   ansible.builtin.set_env:
+   #     AZURE_CLIENT_ID: "{{ app_id }}"
+   #     AZURE_SECRET: "{{ client_secret }}"
+   #     AZURE_TENANT: "{{ tenant_id }}"
+   #     AZURE_SUBSCRIPTION_ID: "{{ azure_subscription_id }}"
 
     - name: Az login with Service Principal
       command: >
